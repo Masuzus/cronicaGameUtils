@@ -23,4 +23,19 @@ public static class DebugUtils
         }
         return Physics2D.Raycast(rayOriginPoint,rayDirection,rayDistance,mask);		
     }
+    
+    public static void LogRed(string message)
+    {
+        Debug.Log($"<color=red>{message}</color>");
+    }
+    
+    public static void LogGreen(string message)
+    {
+        Debug.Log($"<color=green>{message}</color>");
+    }
+    
+    public static void LogColor(string message, string color)
+    {
+        Debug.Log($"<color={color}>{message}</color>");
+    }
 }
