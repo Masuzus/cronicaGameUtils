@@ -1,0 +1,12 @@
+{
+  "name": "com.cronica.cronicagameutils",
+  "version": "0.0.1",
+  "displayName": "Cronica Game Utils",
+  "description": "A lot of gameMack useful static functions",
+  "category": "Runtime",
+  "author": {
+    "name": "Masuzus Leisen",
+    "email": "zls199809@gmail.com",
+    "url": "https://www.cronica.games/"
+  }
+}
