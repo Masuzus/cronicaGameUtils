@@ -2,21 +2,24 @@ using System;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public static class GameUtils
+namespace CronicaGameUtils
 {
-    public static void RemoveAllChild(this Transform parent)
+    public static class GameUtils
     {
-        var count = parent.childCount;
-        for (int i = count - 1; i >= 0; i--)
+        public static void RemoveAllChild(this Transform parent)
         {
-            Object.Destroy(parent.GetChild(i).gameObject);
+            var count = parent.childCount;
+            for (int i = count - 1; i >= 0; i--)
+            {
+                Object.Destroy(parent.GetChild(i).gameObject);
+            }
+            parent.DetachChildren();
         }
-        parent.DetachChildren();
-    }
     
-    //生成guid
-    public static Guid GenerateGuid()
-    {
-        return Guid.NewGuid();
+        //生成guid
+        public static Guid GenerateGuid()
+        {
+            return Guid.NewGuid();
+        }
     }
 }
